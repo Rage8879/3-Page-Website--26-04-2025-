@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            text-decoration: none;
+            color: #fff;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            position: relative;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .categories, .products {
+            padding: 2rem;
+            text-align: center;
+        }
+        .categories h2, .products h2 {
+            margin-bottom: 1rem;
+        }
+        .categories .category-list, .products .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .categories .category, .products .product {
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            padding: 1rem;
+            width: 200px;
+            text-align: center;
+        }
+        .categories .category img, .products .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            margin: 1rem;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 460px;
+        }
+        .slideshow img {
+            width: 100%;
+            display: none;
+        }
+        .slideshow img.active {
+            display: block;
+        }
+        .slideshow .prev, .slideshow .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .slideshow .prev {
+            left: 10px;
+        }
+        .slideshow .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">ShopEase</a>
+        <nav>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="about-us.html">About Us</a>
+            <a href="login.html"> Login/Signup</a>
+        </nav>
+    </header>
+
+    <section class="slideshow">
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+        <img src="Assets\Images\413jn4tXTeL._SX300_SY300_QL70_FMwebp_.jpg" alt="Highlight 1" class="active">
+        <img src="Assets\Images\67c16783dcab667e6d1ef1a8-samsung-32-class-fhd-1080p-smart-led.jpg" alt="Highlight 2">
+        <img src="Assets/Images/2100184_P6YTO90-1.jpg" alt="Highlight 3">
+    </section>
+
+    <section id="categories" class="categories">
+        <h2>Shop by Categories</h2>
+        <div class="category-list">
+            <div class="category">
+                <img src="Assets/Images/electronics.jpg" alt="Electronics">
+                <p>Electronics</p>
+            </div>
+            <div class="category">
+                <img src="Assets/Images/pexels-godisable-jacob-226636-794064.jpg" alt="Fashion">
+                <p>Fashion</p>
+            </div>
+            <div class="category">
+                <img src="Assets/Images/ezgif-5af10de1fc657b.jpg" alt="Home & Living">
+                <p>Home & Living</p>
+            </div>
+            <div class="category">
+                <img src="Assets/Images/dumbbell-with-disks-on-a-yellow-background-close-up-sports-lifestyle-strength-training-gym-copy-space-photo.jpg" alt="Sports & fitness">
+                <p>Sports & fitness</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="Assets/Images/ezgif-313a2d21d4b21f.jpg" alt="Product 1">
+                <p>Trimmer</p>
+                <p>₹2,499/-</p>
+            </div>
+            <div class="product">
+                <img src="Assets/Images/717JX3femML.jpg" alt="Product 2">
+                <p>Smart Phone</p>
+                <p>₹34,999/-</p>
+            </div>
+            <div class="product">
+                <img src="Assets/Images/81hgjKwsdHL._AC_UF1000,1000_QL80_.jpg" alt="Product 3">
+                <p>Alexa</p>
+                <p>₹4,999/-</p>
+            </div>
+            <div class="product">
+                <img src="Assets/Images/510uTHyDqGL.jpg" alt="Product 3">
+                <p>Laptop</p>
+                <p>₹49,999/-</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.slideshow img');
+        const prevButton = document.querySelector('.slideshow .prev');
+        const nextButton = document.querySelector('.slideshow .next');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        prevButton.addEventListener('click', () => showSlide(currentSlide - 1));
+        nextButton.addEventListener('click', () => showSlide(currentSlide + 1));
+
+        setInterval(() => showSlide(currentSlide + 1), 5000);
+    </script>
+</body>
+</html>
